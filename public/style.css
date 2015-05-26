@@ -1,0 +1,22 @@
+body{
+  background: blue;
+}
+
+nav{
+    text-align: centre
+}
+
+li{
+  display: inline-block;
+  padding: 2%;
+  border :1px dotted white;
+}
+
+li a {
+  color:white;
+  text-decoration: none;
+}
+
+li a:hover {
+  color:pink;
+}
