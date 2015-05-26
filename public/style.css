@@ -3,6 +3,7 @@ body{
   background-image: url(http://photos1.blogger.com/blogger/1875/341/1600/abacus.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
+  font-family: 'Indie Flower', cursive;
 
 }
 
@@ -10,15 +11,20 @@ nav{
     text-align: center;
     position: relative;
     text-shadow: 1px 1px 1px #000;
+    
+
 }
 
 li{
   display: inline-block;
   padding: 2%;
-  border :1px dotted white;
+  border :1px solid white;
   text-align: center;
   font-size: 25px;
-}
+  border-radius: 15px 50px 30px;
+  text-shadow: 1px 1px 1px #000;
+    
+  }
 
 li a {
   color:white;
@@ -38,10 +44,11 @@ form  {
 
 }
 
+
 p{
   text-align: center;
   color: white;
-  font-size: 23px;
+  font-size: 35px;
   text-shadow: 1px 1px 1px #000;
 }
 
