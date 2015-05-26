@@ -31,7 +31,7 @@ end
   get '/square' do
     @first = params[:first].to_f
    
-   if @first
+   if @first > 0.0
     @result = Math.sqrt(@first).to_f
    end 
     erb :square
@@ -39,7 +39,7 @@ end
 
   get '/bmi' do
     @weight = params[:weight].to_f
-    if @weight
+    if @weight > 0.0
       @height = params[:height].to_f
       @result = @weight/(@height * @height).to_f
     end  
@@ -51,13 +51,23 @@ end
     @interest = params[:interest].to_f
     @months = params[:months].to_i
     
-       # @result_mort_calc = (@principal * (@interest * (1 + @interest)**@months) / ((1+@interest)**@months - 1)).round(2)
+  
 
     @result = (@principal * (@interest * (1 + @interest)**@months) / ((1+@interest)**@months - 1)).round(2)
-      # @result =  @principal(@interest(1+@interest)*@months)/((1+@interest)*@months -1)
-    # end
+    
     erb :mortgage
   end  
-  # Your BMI is #{weight_m/(height_m**2)}"
+  get '/trip' do
+    @distance = params[:distance].to_f
+    
+    if @distance > 0.0
+    @speed = params[:speed].to_f
+    @mpg =params[:mpg].to_f
+    @price = params[:price].to_f
 
+    @hours = @distance/@speed
+    @cost = (@distance/@mpg)*@price
+  end
 
+  erb :trip
+end
