@@ -1,0 +1,14 @@
+<form action="/mortgage" method ="get">
+     <label for="principal">PRINCIPAL</label>
+     <input type ="text" name ="principal" placeholder ="Enter Principal">
+     <label for="interest">INTEREST</label>
+     <input type ="text" name ="interest" placeholder ="Enter the interest">
+     <label for="months">NUMBER OF MONTHS</label>
+     <input type ="text" name ="months" placeholder ="Enter the number of months">
+     <input type ="submit">
+</form>
+
+
+ <% if @result %>
+   <p>Your monthly payments are: <%= @result %></p>
+<% end %>
