@@ -37,4 +37,16 @@ end
     erb :square
   end  
 
+  get '/bmi' do
+    @weight = params[:weight].to_f
+    if @weight
+      @height = params[:height].to_f
+      @result = @weight/(@height * @height).to_f
+    end  
+  
+  erb :bmi
+  end  
+
+  # Your BMI is #{weight_m/(height_m**2)}"
+
 
